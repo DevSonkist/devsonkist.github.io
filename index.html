@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ProSpin Pickleball | Premium Paddles & Gear</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Shop premium pickleball paddles and gear. Experience power, control, and precision with ProSpin technology.">
+  <meta name="keywords" content="Pickleball, Paddles, Carbon Fiber Paddle, Pickleball Gear, ProSpin Pickleball">
+  <meta name="author" content="ProSpin Pickleball">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    /* --- Basic Styling --- */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f7f7f7;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header, nav, footer {
+      background: #00b894;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      color: #00b894;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: #00b894;
+      margin: 0 15px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .hero {
+      position: relative;
+      background: url('your-hero-pickleball.jpg') no-repeat center/cover;
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero h1, .hero p, .hero button {
+      position: relative;
+      z-index: 2;
+    }
+    .section-title {
+      text-align: center;
+      margin: 50px 0 20px;
+      font-size: 2.5em;
+      color: #00b894;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    .product-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .info {
+      padding: 20px;
+    }
+    .price {
+      font-weight: bold;
+      margin: 10px 0;
+      font-size: 1.2em;
+    }
+    .checkout-buttons button {
+      width: 48%;
+      margin: 5px 1%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .paypal-btn { background: #ffc439; }
+    .stripe-btn { background: #6772e5; color: white; }
+
+    /* Floating Cart */
+    .cart-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #00b894;
+      color: white;
+      font-size: 2em;
+      padding: 15px;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    /* Login Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-content {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      max-width: 600px;
+      margin: 50px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .contact-form button {
+      background: #00b894;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    footer {
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>ProSpin Pickleball</h1>
+  <p>Next-Gen Pickleball Gear</p>
+</header>
+
+<nav>
+  <div>
+    <a href="#products">Shop</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="javascript:void(0)" onclick="openLogin()">Login</a>
+</nav>
+
+<section class="hero">
+  <h1>Dominate the Court</h1>
+  <p>Unleash your potential with ProSpin Technology.</p>
+</section>
+
+<h2 class="section-title" id="products" data-aos="fade-up">Shop Our Gear</h2>
+
+<section class="products" data-aos="fade-up">
+  <!-- Product 1 -->
+  <div class="product-card">
+    <img src="paddle1.jpg" alt="Thermoform Paddle">
+    <div class="info">
+      <h3>ProSpin Elite Paddle</h3>
+      <p>Thermoformed Carbon Fiber | Explosive Power</p>
+      <div class="price">$149</div>
+      <div class="checkout-buttons">
+        <button class="paypal-btn" onclick="checkoutPayPal('Elite')">PayPal</button>
+        <button class="stripe-btn" onclick="checkoutStripe('Elite')">Stripe</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 2 -->
+  <div class="product-card">
+    <img src="paddle2.jpg" alt="Carbon Fiber Paddle">
+    <div class="info">
+      <h3>CarbonX Control Paddle</h3>
+      <p>Raw Carbon Face | Maximum Spin</p>
+      <div class="price">$129</div>
+      <div class="checkout-buttons">
+        <button class="paypal-btn" onclick="checkoutPayPal('CarbonX')">PayPal</button>
+        <button class="stripe-btn" onclick="checkoutStripe('CarbonX')">Stripe</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 3 -->
+  <div class="product-card">
+    <img src="grip.jpg" alt="Grip Tape">
+    <div class="info">
+      <h3>UltraGrip Tape</h3>
+      <p>Comfortable Anti-slip Grip</p>
+      <div class="price">$19</div>
+      <div class="checkout-buttons">
+        <button class="paypal-btn" onclick="checkoutPayPal('Grip')">PayPal</button>
+        <button class="stripe-btn" onclick="checkoutStripe('Grip')">Stripe</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Floating Cart Icon -->
+<div class="cart-icon" onclick="alert('View cart (feature coming soon!)')">
+  🛒
+</div>
+
+<h2 class="section-title" id="contact" data-aos="fade-up">Contact Us</h2>
+
+<section class="contact-form" data-aos="fade-up">
+  <form action="https://formspree.io/f/YOUR_ID" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="_replyto" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 ProSpin Pickleball. All rights reserved.
+</footer>
+
+<!-- Login Modal -->
+<div class="modal" id="loginModal">
+  <div class="modal-content">
+    <h2>Login</h2>
+    <input type="email" placeholder="Email" /><br><br>
+    <input type="password" placeholder="Password" /><br><br>
+    <button onclick="closeLogin()">Login</button><br><br>
+    <button onclick="closeLogin()">Cancel</button>
+  </div>
+</div>
+
+<!-- AOS Animation -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<script>
+  function openLogin() {
+    document.getElementById('loginModal').style.display = 'flex';
+  }
+  function closeLogin() {
+    document.getElementById('loginModal').style.display = 'none';
+  }
+
+  function checkoutPayPal(item) {
+    alert("Redirecting to PayPal Checkout for " + item);
+    // Here you would redirect to real PayPal link
+  }
+
+  function checkoutStripe(item) {
+    alert("Redirecting to Stripe Checkout for " + item);
+    // Here you would redirect to real Stripe checkout page
+  }
+</script>
+
+</body>
+</html>
